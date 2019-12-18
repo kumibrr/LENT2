@@ -1,0 +1,12 @@
+C:\Users\alumno\git\LENT2\0001_Tragaperras\0001_Tragaperras\bin\Debug\0001_Tragaperras.exe.config
+C:\Users\alumno\git\LENT2\0001_Tragaperras\0001_Tragaperras\bin\Debug\0001_Tragaperras.exe
+C:\Users\alumno\git\LENT2\0001_Tragaperras\0001_Tragaperras\bin\Debug\0001_Tragaperras.pdb
+C:\Users\alumno\git\LENT2\0001_Tragaperras\0001_Tragaperras\bin\Debug\0001_Tragaperras.xml
+C:\Users\alumno\git\LENT2\0001_Tragaperras\0001_Tragaperras\obj\Debug\0001_Tragaperras.vbprojAssemblyReference.cache
+C:\Users\alumno\git\LENT2\0001_Tragaperras\0001_Tragaperras\obj\Debug\_0001_Tragaperras.Form.resources
+C:\Users\alumno\git\LENT2\0001_Tragaperras\0001_Tragaperras\obj\Debug\_0001_Tragaperras.Resources.resources
+C:\Users\alumno\git\LENT2\0001_Tragaperras\0001_Tragaperras\obj\Debug\0001_Tragaperras.vbproj.GenerateResource.cache
+C:\Users\alumno\git\LENT2\0001_Tragaperras\0001_Tragaperras\obj\Debug\0001_Tragaperras.vbproj.CoreCompileInputs.cache
+C:\Users\alumno\git\LENT2\0001_Tragaperras\0001_Tragaperras\obj\Debug\0001_Tragaperras.exe
+C:\Users\alumno\git\LENT2\0001_Tragaperras\0001_Tragaperras\obj\Debug\0001_Tragaperras.xml
+C:\Users\alumno\git\LENT2\0001_Tragaperras\0001_Tragaperras\obj\Debug\0001_Tragaperras.pdb
