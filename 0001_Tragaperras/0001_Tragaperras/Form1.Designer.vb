@@ -26,15 +26,15 @@ Partial Class Form
         Me.runButton = New System.Windows.Forms.Button()
         Me.endButton = New System.Windows.Forms.Button()
         Me.mainControlPanel = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.firstNumber = New System.Windows.Forms.Label()
+        Me.labelSecondNum = New System.Windows.Forms.Label()
+        Me.labelFirstNum = New System.Windows.Forms.Label()
+        Me.labelThirdNum = New System.Windows.Forms.Label()
         Me.winPanel = New System.Windows.Forms.Panel()
-        Me.leprechaunImage = New System.Windows.Forms.PictureBox()
+        Me.imageLeprechaun = New System.Windows.Forms.PictureBox()
         Me.winLabel = New System.Windows.Forms.Label()
         Me.mainControlPanel.SuspendLayout()
         Me.winPanel.SuspendLayout()
-        CType(Me.leprechaunImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imageLeprechaun, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'runButton
@@ -57,9 +57,9 @@ Partial Class Form
         '
         'mainControlPanel
         '
-        Me.mainControlPanel.Controls.Add(Me.Label2)
-        Me.mainControlPanel.Controls.Add(Me.Label1)
-        Me.mainControlPanel.Controls.Add(Me.firstNumber)
+        Me.mainControlPanel.Controls.Add(Me.labelSecondNum)
+        Me.mainControlPanel.Controls.Add(Me.labelFirstNum)
+        Me.mainControlPanel.Controls.Add(Me.labelThirdNum)
         Me.mainControlPanel.Controls.Add(Me.runButton)
         Me.mainControlPanel.Controls.Add(Me.endButton)
         Me.mainControlPanel.Location = New System.Drawing.Point(12, 12)
@@ -67,42 +67,42 @@ Partial Class Form
         Me.mainControlPanel.Size = New System.Drawing.Size(272, 53)
         Me.mainControlPanel.TabIndex = 2
         '
-        'Label2
+        'labelSecondNum
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(172, 3)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 48)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "1"
+        Me.labelSecondNum.AutoSize = True
+        Me.labelSecondNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.labelSecondNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelSecondNum.Location = New System.Drawing.Point(172, 3)
+        Me.labelSecondNum.Name = "labelSecondNum"
+        Me.labelSecondNum.Size = New System.Drawing.Size(44, 48)
+        Me.labelSecondNum.TabIndex = 3
+        Me.labelSecondNum.Text = "1"
         '
-        'Label1
+        'labelFirstNum
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(115, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 48)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "1"
+        Me.labelFirstNum.AutoSize = True
+        Me.labelFirstNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.labelFirstNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelFirstNum.Location = New System.Drawing.Point(115, 3)
+        Me.labelFirstNum.Name = "labelFirstNum"
+        Me.labelFirstNum.Size = New System.Drawing.Size(44, 48)
+        Me.labelFirstNum.TabIndex = 2
+        Me.labelFirstNum.Text = "1"
         '
-        'firstNumber
+        'labelThirdNum
         '
-        Me.firstNumber.AutoSize = True
-        Me.firstNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.firstNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.firstNumber.Location = New System.Drawing.Point(227, 3)
-        Me.firstNumber.Name = "firstNumber"
-        Me.firstNumber.Size = New System.Drawing.Size(44, 48)
-        Me.firstNumber.TabIndex = 0
-        Me.firstNumber.Text = "1"
+        Me.labelThirdNum.AutoSize = True
+        Me.labelThirdNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.labelThirdNum.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelThirdNum.Location = New System.Drawing.Point(227, 3)
+        Me.labelThirdNum.Name = "labelThirdNum"
+        Me.labelThirdNum.Size = New System.Drawing.Size(44, 48)
+        Me.labelThirdNum.TabIndex = 0
+        Me.labelThirdNum.Text = "1"
         '
         'winPanel
         '
-        Me.winPanel.Controls.Add(Me.leprechaunImage)
+        Me.winPanel.Controls.Add(Me.imageLeprechaun)
         Me.winPanel.Controls.Add(Me.winLabel)
         Me.winPanel.Location = New System.Drawing.Point(12, 71)
         Me.winPanel.Name = "winPanel"
@@ -110,16 +110,16 @@ Partial Class Form
         Me.winPanel.TabIndex = 3
         Me.winPanel.Visible = False
         '
-        'leprechaunImage
+        'imageLeprechaun
         '
-        Me.leprechaunImage.Image = CType(resources.GetObject("leprechaunImage.Image"), System.Drawing.Image)
-        Me.leprechaunImage.Location = New System.Drawing.Point(120, 3)
-        Me.leprechaunImage.Name = "leprechaunImage"
-        Me.leprechaunImage.Size = New System.Drawing.Size(149, 136)
-        Me.leprechaunImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.leprechaunImage.TabIndex = 1
-        Me.leprechaunImage.TabStop = False
-        Me.leprechaunImage.Visible = False
+        Me.imageLeprechaun.Image = CType(resources.GetObject("imageLeprechaun.Image"), System.Drawing.Image)
+        Me.imageLeprechaun.Location = New System.Drawing.Point(120, 3)
+        Me.imageLeprechaun.Name = "imageLeprechaun"
+        Me.imageLeprechaun.Size = New System.Drawing.Size(149, 136)
+        Me.imageLeprechaun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.imageLeprechaun.TabIndex = 1
+        Me.imageLeprechaun.TabStop = False
+        Me.imageLeprechaun.Visible = False
         '
         'winLabel
         '
@@ -145,7 +145,7 @@ Partial Class Form
         Me.mainControlPanel.PerformLayout()
         Me.winPanel.ResumeLayout(False)
         Me.winPanel.PerformLayout()
-        CType(Me.leprechaunImage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imageLeprechaun, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -155,8 +155,8 @@ Partial Class Form
     Friend WithEvents mainControlPanel As Panel
     Friend WithEvents winPanel As Panel
     Friend WithEvents winLabel As Label
-    Friend WithEvents firstNumber As Label
-    Friend WithEvents leprechaunImage As PictureBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents labelThirdNum As Label
+    Friend WithEvents imageLeprechaun As PictureBox
+    Friend WithEvents labelSecondNum As Label
+    Friend WithEvents labelFirstNum As Label
 End Class
