@@ -1,4 +1,6 @@
 ﻿Public Class Form
+    ' sender = target
+    ' e = objeto evento
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -15,7 +17,7 @@
         End
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles labelFirstNum.Click
+    Private Sub label1_Click(sender As Object, e As EventArgs) Handles labelFirstNum.Click
 
     End Sub
 End Class

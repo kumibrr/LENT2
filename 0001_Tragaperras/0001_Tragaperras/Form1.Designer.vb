@@ -131,6 +131,7 @@ Partial Class Form
         Me.winLabel.Size = New System.Drawing.Size(111, 50)
         Me.winLabel.TabIndex = 0
         Me.winLabel.Text = "Siete" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "afortunado!"
+        Me.winLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Form
         '
