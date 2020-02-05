@@ -19,27 +19,26 @@
 
     Function CalculatePercentageAndDiscard(party() As Party)
 
-        For index = 0 To parties.Length - 1
-            totalVotes += parties(index).votes
+        For i = 0 To parties.Length - 1
+            totalVotes += parties(i).votes
         Next
 
-        For index = 0 To party.Length - 1
-            party(index).percentage = CInt(party(index).votes * 100 / totalVotes)
-            If party(index).percentage < 3 Then
-                party(index).votes = 0
+        For i = 0 To party.Length - 1
+            party(i).percentage = CInt(party(i).votes * 100 / totalVotes)
+            If party(i).percentage < 3 Then
                 discaredParties = discaredParties + 1
             End If
         Next
         Return discaredParties
     End Function
 
-    Sub fillTable()
+    Sub drawTable()
         ReDim partiesTable((parties.Length - (1 + discaredParties)), SEATS_AVAILABLE - 1)
-        For index = 0 To parties.Length - (1 + discaredParties)
+        For i = 0 To parties.Length - (1 + discaredParties)
 
-            For index2 = 1 To SEATS_AVAILABLE
+            For j = 0 To SEATS_AVAILABLE - 1
 
-                partiesTable(index, index2 - 1) = parties(index).votes / index2
+                partiesTable(i, j) = parties(i).votes / (j + 1)
 
             Next
 
@@ -49,28 +48,26 @@
 
     Sub distributeSeats()
         Dim seatsOccupied As Integer = 0
-        Dim highestValueIndex1 As Integer
-        Dim highestValueIndex2 As Integer
-        Dim index2Limit As Integer = (partiesTable.GetLength(1) - 1)
-        Dim index1Limit As Integer = (partiesTable.GetLength(0) - 1)
+        Dim highestValuei As Integer
+        Dim highestValuej As Integer
 
         While seatsOccupied < SEATS_AVAILABLE
-            For index = 0 To index1Limit
+            For i = 0 To (partiesTable.GetLength(0) - 1)
 
-                For index2 = 0 To index2Limit
-                    If partiesTable(index, index2) > partiesTable(highestValueIndex1, highestValueIndex2) Then
-                        highestValueIndex1 = index
-                        highestValueIndex2 = index2
+                For j = 0 To (partiesTable.GetLength(1) - 1)
+                    If partiesTable(i, j) > partiesTable(highestValuei, highestValuej) Then
+                        highestValuei = i
+                        highestValuej = j
                     End If
-
                 Next
-            Next
-            seatsOccupied += 1
-            parties(highestValueIndex1).seats += 1
-            partiesTable(highestValueIndex1, highestValueIndex2) = 0
-            highestValueIndex1 = 0
-            highestValueIndex2 = 0
 
+            Next
+
+            seatsOccupied += 1
+            parties(highestValuei).seats += 1
+            partiesTable(highestValuei, highestValuej) = 0
+            highestValuei = 0
+            highestValuej = 0
         End While
 
     End Sub
@@ -89,11 +86,9 @@
     End Function
 
     Sub writeToConsole()
-        For index = 0 To parties.Length - 1
-            Console.WriteLine("Nombre: " + parties(index).partyName)
-            Console.WriteLine("Porcentaje votos: " + parties(index).percentage.ToString)
-            Console.WriteLine("Votos al partido: " + parties(index).votes.ToString)
-            Console.WriteLine("Escanyos asignados: " + parties(index).seats.ToString)
+        For i = 0 To parties.Length - 1
+            Console.WriteLine("Partido: {0}. Porcentaje de votos: {1}. Votos: {2}. Escaños asignados: {3}", parties(i).partyName, parties(i).percentage, parties(i).votes, parties(i).seats)
+            Console.WriteLine("")
         Next
         Console.ReadLine()
     End Sub
@@ -103,7 +98,7 @@
     Sub Main()
         Dim parties() As Party = readData()
         discaredParties = CalculatePercentageAndDiscard(parties)
-        fillTable()
+        drawTable()
         distributeSeats()
         writeToConsole()
     End Sub
