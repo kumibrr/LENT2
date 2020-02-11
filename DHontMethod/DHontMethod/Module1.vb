@@ -1,7 +1,7 @@
 ﻿Module Module1
     'Model definition
-    Const PRESENT_PARTIES As Integer = 3
-    Const SEATS_AVAILABLE As Integer = 5
+    Dim partiesParticipating As Integer
+    Dim seatsAvailable As Integer
 
     Structure Party
         Dim partyName As String
@@ -10,7 +10,7 @@
         Dim percentage As Integer
     End Structure
 
-    Dim parties(PRESENT_PARTIES) As Party
+    Dim parties(partiesParticipating) As Party
     Dim partiesTable(,)
     Dim discaredParties As Integer = 0
     Dim totalVotes As Integer = 0
@@ -33,10 +33,10 @@
     End Function
 
     Sub drawTable()
-        ReDim partiesTable((parties.Length - (1 + discaredParties)), SEATS_AVAILABLE - 1)
+        ReDim partiesTable((parties.Length - (1 + discaredParties)), seatsAvailable - 1)
         For i = 0 To parties.Length - (1 + discaredParties)
 
-            For j = 0 To SEATS_AVAILABLE - 1
+            For j = 0 To seatsAvailable - 1
 
                 partiesTable(i, j) = parties(i).votes / (j + 1)
 
@@ -51,7 +51,7 @@
         Dim highestValuei As Integer
         Dim highestValuej As Integer
 
-        While seatsOccupied < SEATS_AVAILABLE
+        While seatsOccupied < seatsAvailable
             For i = 0 To (partiesTable.GetLength(0) - 1)
 
                 For j = 0 To (partiesTable.GetLength(1) - 1)
@@ -73,21 +73,29 @@
     End Sub
 
     Function readData()
-        parties(0).partyName = "Partido A"
-        parties(0).votes = 2000
-        parties(1).partyName = "Partido B"
-        parties(1).votes = 3000
-        parties(2).partyName = "Partido C"
-        parties(2).votes = 1000
-        parties(3).partyName = "Partido D"
-        parties(3).votes = 100
+        Console.WriteLine("Escanyos disponibles?")
+        seatsAvailable = Console.ReadLine()
+        Console.WriteLine("Partidos que participan(numero)?")
+        partiesParticipating = Console.ReadLine()
+        For i = 0 To partiesParticipating
+            ReDim Preserve parties(i)
+            Console.WriteLine()
+            parties(0).partyName = "Partido A"
+            parties(0).votes = 2000
+            parties(1).partyName = "Partido B"
+            parties(1).votes = 3000
+            parties(2).partyName = "Partido C"
+            parties(2).votes = 1000
+            parties(3).partyName = "Partido D"
+            parties(3).votes = 100
+        Next
 
         Return parties
     End Function
 
     Sub writeToConsole()
         For i = 0 To parties.Length - 1
-            Console.WriteLine("Partido: {0}. Porcentaje de votos: {1}. Votos: {2}. Escaños asignados: {3}", parties(i).partyName, parties(i).percentage, parties(i).votes, parties(i).seats)
+            Console.WriteLine("Partido: {0}. Porcentaje de votos: {1}%. Votos: {2}. Escaños asignados: {3}", parties(i).partyName, parties(i).percentage, parties(i).votes, parties(i).seats)
             Console.WriteLine("")
         Next
         Console.ReadLine()
