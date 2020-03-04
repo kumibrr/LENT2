@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ColorForm
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class colorForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class ColorForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblColor = New System.Windows.Forms.Label()
         Me.lblColorArea = New System.Windows.Forms.Label()
@@ -96,7 +96,7 @@ Partial Class ColorForm
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
-        'Form1
+        'colorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -108,7 +108,7 @@ Partial Class ColorForm
         Me.Controls.Add(Me.btnAmarillo)
         Me.Controls.Add(Me.lblColorArea)
         Me.Controls.Add(Me.lblColor)
-        Me.Name = "Form1"
+        Me.Name = "colorForm"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
 

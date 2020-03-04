@@ -24,6 +24,7 @@ Partial Class mainMenuForm
     Private Sub InitializeComponent()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnComp = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnExit
@@ -44,11 +45,21 @@ Partial Class mainMenuForm
         Me.Button1.Text = "Color"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'btnComp
+        '
+        Me.btnComp.Location = New System.Drawing.Point(129, 21)
+        Me.btnComp.Name = "btnComp"
+        Me.btnComp.Size = New System.Drawing.Size(75, 23)
+        Me.btnComp.TabIndex = 3
+        Me.btnComp.Text = "Computador"
+        Me.btnComp.UseVisualStyleBackColor = True
+        '
         'mainMenuForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(340, 136)
+        Me.Controls.Add(Me.btnComp)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnExit)
         Me.Name = "mainMenuForm"
@@ -58,4 +69,5 @@ Partial Class mainMenuForm
     End Sub
     Friend WithEvents btnExit As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnComp As Button
 End Class
