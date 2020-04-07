@@ -34,8 +34,8 @@ Public Class Notepad__
             pathOfCurrentFile = Path.GetFullPath(openFileDialog.FileName)
             Dim myStream As New StreamReader(openFileDialog.FileName)
             txtMain.Text = myStream.ReadToEnd()
-
             txtMain.Visible = True
+            myStream.Close()
         End If
     End Sub
 
@@ -91,7 +91,13 @@ Public Class Notepad__
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        saveFileDialog()
+        If File.Exists(pathOfCurrentFile) = False Then
+            saveFileDialog()
+        Else
+            Dim myStream As New StreamWriter(pathOfCurrentFile)
+            myStream.WriteLine(txtMain.Text)
+            myStream.Close()
+        End If
     End Sub
 
     Private Sub btnSaveAs_Click(sender As Object, e As EventArgs) Handles btnSaveAs.Click
@@ -121,5 +127,35 @@ Public Class Notepad__
         If fontDialogForm.ShowDialog <> DialogResult.Cancel Then
             txtMain.Font = fontDialogForm.Font
         End If
+    End Sub
+
+    Private Sub btnNewSize_Click(sender As Object, e As EventArgs) Handles btnNewSize.Click
+        If cboSize.Items.Count < 3 Then
+            txtNewSize.Enabled = True
+        Else
+            MessageBox.Show("Ha introducido demasiados valores >:(", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
+    Private Sub txtNewSize_KeyPress_Enter(sender As Object, e As KeyPressEventArgs) Handles txtNewSize.KeyPress
+        If e.KeyChar = ChrW(Keys.Return) Then
+
+            If IsNumeric(txtNewSize.Text) = True Then
+                ''TODO: Me quedé aqui, hay que poner que se seleccione automáticamente el nuevo tamaño introducido y que cambie el estilo del textbox cuando se aplique o des click en el tamaño deseado.
+                If cboSize.Items.Contains(txtNewSize.Text) = False Then
+                    cboSize.SelectedIndex = cboSize.Items.Add(txtNewSize.Text)
+                    txtNewSize.Enabled = False
+                    txtNewSize.Text = ""
+                Else
+                    MessageBox.Show("El valor introducido ya existe", "Valor ya existente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                End If
+            Else
+                MessageBox.Show("El valor introducido no es válido", "Valor no válido", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+
+            e.Handled = True
+
+        End If
+
     End Sub
 End Class
