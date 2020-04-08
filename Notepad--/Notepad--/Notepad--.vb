@@ -122,6 +122,8 @@ Public Class Notepad__
         Dim fontDialogForm As New FontDialog
 
         fontDialogForm.ShowColor = False
+        fontDialogForm.MaxSize = txtMain.Font.Size
+        fontDialogForm.MinSize = txtMain.Font.Size
         fontDialogForm.Font = txtMain.Font
 
         If fontDialogForm.ShowDialog <> DialogResult.Cancel Then
@@ -141,11 +143,15 @@ Public Class Notepad__
         If e.KeyChar = ChrW(Keys.Return) Then
 
             If IsNumeric(txtNewSize.Text) = True Then
-                ''TODO: Me quedé aqui, hay que poner que se seleccione automáticamente el nuevo tamaño introducido y que cambie el estilo del textbox cuando se aplique o des click en el tamaño deseado.
+
                 If cboSize.Items.Contains(txtNewSize.Text) = False Then
                     cboSize.SelectedIndex = cboSize.Items.Add(txtNewSize.Text)
-                    txtNewSize.Enabled = False
+
+                    ''Applying new font to the main textbox.
+                    Dim newFont = New Font(txtMain.Font.Name, Convert.ToInt32(txtNewSize.Text), txtMain.Font.Style, txtMain.Font.Unit)
+                    txtMain.Font = newFont
                     txtNewSize.Text = ""
+                    txtNewSize.Enabled = False
                 Else
                     MessageBox.Show("El valor introducido ya existe", "Valor ya existente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 End If
@@ -157,5 +163,44 @@ Public Class Notepad__
 
         End If
 
+    End Sub
+
+    Private Sub cboSize_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboSize.SelectedIndexChanged
+        If IsNumeric(cboSize.SelectedItem) = True Then
+            Dim newFont = New Font(txtMain.Font.Name, Convert.ToInt32(cboSize.SelectedItem), txtMain.Font.Style, txtMain.Font.Unit)
+            txtMain.Font = newFont
+        End If
+
+    End Sub
+
+    Private Sub btnBackgroundColor_Click(sender As Object, e As EventArgs) Handles btnBackgroundColor.Click
+        Dim colorDialogForm As New ColorDialog
+        colorDialogForm.Color = txtMain.BackColor
+
+        If colorDialogForm.ShowDialog <> DialogResult.Cancel Then
+            txtMain.BackColor = colorDialogForm.Color
+        End If
+
+    End Sub
+
+    Private Sub btnTextColor_Click(sender As Object, e As EventArgs) Handles btnTextColor.Click
+        Dim colorDialogForm As New ColorDialog
+        colorDialogForm.Color = txtMain.ForeColor
+
+        If colorDialogForm.ShowDialog <> DialogResult.Cancel Then
+            txtMain.ForeColor = colorDialogForm.Color
+        End If
+    End Sub
+
+    Private Sub btnCut_Click(sender As Object, e As EventArgs) Handles btnCut.Click
+        txtMain.Cut()
+    End Sub
+
+    Private Sub btnCopy_Click(sender As Object, e As EventArgs) Handles btnCopy.Click
+        txtMain.Copy()
+    End Sub
+
+    Private Sub btnPaste_Click(sender As Object, e As EventArgs) Handles btnPaste.Click
+        txtMain.Paste()
     End Sub
 End Class

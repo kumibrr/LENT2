@@ -71,41 +71,41 @@ Partial Class Notepad__
         'btnNewFile
         '
         Me.btnNewFile.Name = "btnNewFile"
-        Me.btnNewFile.Size = New System.Drawing.Size(300, 44)
+        Me.btnNewFile.Size = New System.Drawing.Size(359, 44)
         Me.btnNewFile.Text = "Nuevo"
         '
         'btnOpenFile
         '
         Me.btnOpenFile.Name = "btnOpenFile"
-        Me.btnOpenFile.Size = New System.Drawing.Size(300, 44)
+        Me.btnOpenFile.Size = New System.Drawing.Size(359, 44)
         Me.btnOpenFile.Text = "Abrir"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(297, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(356, 6)
         '
         'btnSave
         '
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(300, 44)
+        Me.btnSave.Size = New System.Drawing.Size(359, 44)
         Me.btnSave.Text = "Guardar"
         '
         'btnSaveAs
         '
         Me.btnSaveAs.Name = "btnSaveAs"
-        Me.btnSaveAs.Size = New System.Drawing.Size(300, 44)
+        Me.btnSaveAs.Size = New System.Drawing.Size(359, 44)
         Me.btnSaveAs.Text = "Guardar como"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(297, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(356, 6)
         '
         'btnClose
         '
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(300, 44)
+        Me.btnClose.Size = New System.Drawing.Size(359, 44)
         Me.btnClose.Text = "Salir"
         '
         'StyleToolStripMenuItem
@@ -118,19 +118,19 @@ Partial Class Notepad__
         'btnFont
         '
         Me.btnFont.Name = "btnFont"
-        Me.btnFont.Size = New System.Drawing.Size(303, 44)
+        Me.btnFont.Size = New System.Drawing.Size(359, 44)
         Me.btnFont.Text = "Fuente ..."
         '
         'btnBackgroundColor
         '
         Me.btnBackgroundColor.Name = "btnBackgroundColor"
-        Me.btnBackgroundColor.Size = New System.Drawing.Size(303, 44)
+        Me.btnBackgroundColor.Size = New System.Drawing.Size(359, 44)
         Me.btnBackgroundColor.Text = "Color Fondo ..."
         '
         'btnTextColor
         '
         Me.btnTextColor.Name = "btnTextColor"
-        Me.btnTextColor.Size = New System.Drawing.Size(303, 44)
+        Me.btnTextColor.Size = New System.Drawing.Size(359, 44)
         Me.btnTextColor.Text = "Color Texto ..."
         '
         'EditToolStripMenuItem
@@ -143,19 +143,19 @@ Partial Class Notepad__
         'btnCut
         '
         Me.btnCut.Name = "btnCut"
-        Me.btnCut.Size = New System.Drawing.Size(218, 44)
+        Me.btnCut.Size = New System.Drawing.Size(359, 44)
         Me.btnCut.Text = "Cortar"
         '
         'btnCopy
         '
         Me.btnCopy.Name = "btnCopy"
-        Me.btnCopy.Size = New System.Drawing.Size(218, 44)
+        Me.btnCopy.Size = New System.Drawing.Size(359, 44)
         Me.btnCopy.Text = "Copiar"
         '
         'btnPaste
         '
         Me.btnPaste.Name = "btnPaste"
-        Me.btnPaste.Size = New System.Drawing.Size(218, 44)
+        Me.btnPaste.Size = New System.Drawing.Size(359, 44)
         Me.btnPaste.Text = "Pegar"
         '
         'SizeToolStripMenuItem
@@ -186,6 +186,7 @@ Partial Class Notepad__
         '
         'cboSize
         '
+        Me.cboSize.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.cboSize.Name = "cboSize"
         Me.cboSize.Size = New System.Drawing.Size(121, 40)
         '
