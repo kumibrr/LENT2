@@ -24,7 +24,6 @@
         lblFormTitle.Text = "Window title"
         lblFormTitle.Location = New Point(15, 10)
         lblFormTitle.Size = New Size(100, 20)
-
         txtFormtitle = New TextBox
         txtFormtitle.Location = New Point(150, 8)
         txtFormtitle.Size = New Size(200, 20)
@@ -38,9 +37,17 @@
         txtFormTxtBox.Size = New Size(132, 20)
         txtFormTxtBox.Location = New Point(120, 45)
 
+        btnExit = New Button
+        btnExit.Location = New Point(50, 50)
+
         Me.Controls.Add(lblFormTitle)
         Me.Controls.Add(txtFormtitle)
         Me.Controls.Add(lblFormTxtBox)
         Me.Controls.Add(txtFormTxtBox)
+        Me.Controls.Add(btnExit)
+
+        Me.ShowDialog()
+        Me.ShowDialog()
+
     End Sub
 End Class
